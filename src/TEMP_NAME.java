@@ -10,7 +10,7 @@ public class TEMP_NAME extends PApplet
 
 	public void settings()
 	{
-		size(800, 600);
+		size(900, 600);
 	}
 
 	public void setup()
