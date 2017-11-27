@@ -10,7 +10,6 @@ public class MainClass extends PApplet
 	PImage	appClick;
 	PImage	backButton;
 	PImage	createPlaylist;
-	
 	PImage	requestSong;
 	PImage	playlistName;
 	PImage	password;
@@ -91,6 +90,7 @@ public class MainClass extends PApplet
 		background(150, 0, 100);
 		image(backButton, 200, 580);
 		image(playlistName, 130, 60);
+		//rect(100, 160, 300, 30, 0);
 		image(password, 130, 260);
 		playList.draw();
 		passwordString.draw();

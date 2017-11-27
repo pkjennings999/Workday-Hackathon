@@ -10,5 +10,8 @@ public class GlobalVariables
 	public static String playListNameString ="";
 	public static String passwordString = "";
 	public static String requestSongString = "";
-	public static String textInput;
+	public static String playListOut;
+	public static String passwordStringOut;
+	public static String requestNameOut;
+
 }
