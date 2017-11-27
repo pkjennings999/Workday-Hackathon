@@ -93,7 +93,6 @@ public class MainClass extends PApplet
 		background(150, 0, 100);
 		image(backButton, 200, 580);
 		image(playlistName, 130, 60);
-		//rect(100, 160, 300, 30, 0);
 		image(password, 130, 260);
 		playList.draw();
 		passwordString.draw();
@@ -117,7 +116,7 @@ public class MainClass extends PApplet
 	{
 		if (GlobalVariables.homescreen)
 		{
-			if (mouseX <= 200 && mouseX >= 155 && mouseY <= 730
+			if (mouseX <= 230 && mouseX >= 155 && mouseY <= 730
 					&& mouseY >= 630)
 			{
 				GlobalVariables.createRequestScreen = true;
