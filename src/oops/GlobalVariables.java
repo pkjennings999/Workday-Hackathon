@@ -6,6 +6,7 @@ public class GlobalVariables
 	public static boolean	createRequestScreen	= false;
 	public static boolean	createScreen		= false;
 	public static boolean	requestScreen		= false;
+	public static boolean	play				= false;
 
 	public static String	playListNameString	= "";
 	public static String	passwordString		= "";
