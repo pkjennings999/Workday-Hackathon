@@ -42,7 +42,9 @@ public class MainClass extends PApplet
 		password = loadImage("password.png");
 		songName = loadImage("SongName.png");
 		
-		playList = new SearchBar(100,160,50);
+		playList = new SearchBar(100,160,300);
+		passwordString = new SearchBar(100,360,300);
+		requestName = new SearchBar(100,545,300);
 	}
 
 	public void draw()
@@ -88,10 +90,9 @@ public class MainClass extends PApplet
 		background(150, 0, 100);
 		image(backButton, 200, 580);
 		image(playlistName, 130, 60);
-		//rect(100, 160, 300, 30, 0);
 		image(password, 130, 260);
-		//rect(100, 360, 300, 30, 0);
 		playList.draw();
+		passwordString.draw();
 	}
 
 	public void drawRequestScreen()
@@ -100,19 +101,12 @@ public class MainClass extends PApplet
 		background(150, 0, 100);
 		image(backButton, 200, 580);
 		image(playlistName, 130, 60);
-		rect(100, 160, 300, 30, 0);
 		image(password, 130, 260);
-		rect(100, 360, 300, 30, 0);
 		image(songName, 130, 460);
-		rect(100, 545, 300, 30, 0);
 		
-		fill(0);
-		
-		if(GlobalVariables.requestScreen)
-		{
-			
-		}
-
+		playList.draw();
+		passwordString.draw();
+		requestName.draw();
 	}
 	
 	public void mouseClicked()
