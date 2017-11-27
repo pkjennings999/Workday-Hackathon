@@ -36,6 +36,7 @@ public class SearchBar extends Widget
 		this.fontSize = height - 2 * margin;
 		this.radius = 3;
 		this.ghost_text = "";
+		this.output = output;
 
 		// Register as observer for mouse and keys
 		MainClass.UI.registerMethod("mouseEvent", this);
@@ -66,6 +67,7 @@ public class SearchBar extends Widget
 			{
 				case '\n':
 					output = entry;
+					System.out.print(output);
 					reset();
 					break;
 				case '\b':
@@ -81,7 +83,7 @@ public class SearchBar extends Widget
 					insertAtCursor(keyEvent.getKey());
 					break;
 				case 38:
-				case 46:
+				case 16:
 			}
 		}
 	}

@@ -108,6 +108,8 @@ public class MainClass extends PApplet
 		image(backButton, 200, 580);
 		image(playlistName, 130, 60);
 		//image(password, 130, 260);
+		text("Please enter the link", 130,425);
+		text("to the song on Youtube", 130, 445);
 		image(songName, 130, 460);
 
 		playList.draw();
