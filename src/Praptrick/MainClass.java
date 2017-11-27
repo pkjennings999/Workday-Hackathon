@@ -1,14 +1,14 @@
 package Praptrick;
+
 import processing.core.PApplet;
 import processing.core.PImage;
 import controlP5.*;
 
-
 public class MainClass extends PApplet
 {
-	public static MainClass UI;
-	ControlP5 cp5;
-	
+	public static MainClass	UI;
+	ControlP5				cp5;
+
 	PImage	background;
 	PImage	appClick;
 	PImage	backButton;
@@ -18,11 +18,11 @@ public class MainClass extends PApplet
 	PImage	password;
 	PImage	songName;
 
-	int state = 0; 
-	String playListNameString ="";
-	String passwordString = "";
-	String requestSongString = "";
-	String var ="";
+	int		state				= 0;
+	String	playListNameString	= "";
+	String	passwordString		= "";
+	String	requestSongString	= "";
+	String	var					= "";
 
 	public static void main(String[] args)
 	{
@@ -46,18 +46,14 @@ public class MainClass extends PApplet
 		playlistName = loadImage("PlaylistName.PNG");
 		password = loadImage("password.png");
 		songName = loadImage("SongName.png");
-		
+
 		cp5 = new ControlP5(this);
-		
-		cp5.addTextfield("Playlist Name")
-	      .setSize(200, 40)
-	          .setFocus(true)
-	            .setColor(color(255, 0, 0));
-		
-		cp5.addTextfield("Password")
-	      .setSize(200, 40)
-	          .setFocus(true)
-	            .setColor(color(255, 0, 0));
+
+		cp5.addTextfield("Playlist Name").setSize(200, 40).setFocus(true)
+				.setColor(color(255, 0, 0));
+
+		cp5.addTextfield("Password").setSize(200, 40).setFocus(true)
+				.setColor(color(255, 0, 0));
 	}
 
 	public void draw()
@@ -108,12 +104,12 @@ public class MainClass extends PApplet
 		//rect(100, 160, 300, 30, 0);
 		image(password, 130, 260);
 		//rect(100, 360, 300, 30, 0);
-		
+
 		fill(0);
-		if(GlobalVariables.createScreen)
+		if (GlobalVariables.createScreen)
 		{
-			text(cp5.get(Textfield.class,"Playlist Name").getText(), 360,130);
-			text(cp5.get(Textfield.class,"Password").getText(), 360,130);
+			text(cp5.get(Textfield.class, "Playlist Name").getText(), 360, 130);
+			text(cp5.get(Textfield.class, "Password").getText(), 360, 130);
 		}
 	}
 
@@ -128,25 +124,26 @@ public class MainClass extends PApplet
 		rect(100, 360, 300, 30, 0);
 		image(songName, 130, 460);
 		rect(100, 545, 300, 30, 0);
-		
+
 		fill(0);
-		
-		if(GlobalVariables.requestScreen)
+
+		if (GlobalVariables.requestScreen)
 		{
-			text(cp5.get(Textfield.class,"Playlist Name").getText(), 360,130);
-			text(cp5.get(Textfield.class,"Password").getText(), 360,130);
+			text(cp5.get(Textfield.class, "Playlist Name").getText(), 360, 130);
+			text(cp5.get(Textfield.class, "Password").getText(), 360, 130);
 		}
 
 	}
-	
-	public void keyPressed() 
+
+	public void keyPressed()
 	{
-		 
-		  if (key==ENTER||key==RETURN) {
-		 
-		    state++;
-		  } else
-		  var = var + key;
+
+		if (key == ENTER || key == RETURN)
+		{
+
+			state++;
+		}
+		else var = var + key;
 	}
 
 	public void mouseClicked()

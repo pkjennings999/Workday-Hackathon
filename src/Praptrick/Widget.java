@@ -1,50 +1,64 @@
 package Praptrick;
+
 import java.util.ArrayList;
 
-public class Widget {
+public class Widget
+{
 
-    protected int xPosition, yPosition;
-    protected int height;
-    protected int width;
-    protected boolean canDraw = true;
+	protected int		xPosition, yPosition;
+	protected int		height;
+	protected int		width;
+	protected boolean	canDraw	= true;
 
-    public int getxPosition() {
-        return xPosition;
-    }
+	public int getxPosition()
+	{
+		return xPosition;
+	}
 
-    public void setxPosition(int xPosition) {
-        this.xPosition = xPosition;
-    }
+	public void setxPosition(int xPosition)
+	{
+		this.xPosition = xPosition;
+	}
 
-    public int getyPosition() {
-        return yPosition;
-    }
+	public int getyPosition()
+	{
+		return yPosition;
+	}
 
-    public void setyPosition(int yPosition) {
-        this.yPosition = yPosition;
-    }
+	public void setyPosition(int yPosition)
+	{
+		this.yPosition = yPosition;
+	}
 
-    public void setCanDraw(boolean canDraw) {
-        this.canDraw = canDraw;
-    }
+	public void setCanDraw(boolean canDraw)
+	{
+		this.canDraw = canDraw;
+	}
 
-    public int getHeight() {
-        return height;
-    }
+	public int getHeight()
+	{
+		return height;
+	}
 
-    public int getWidth() {
-        return width;
-    }
+	public int getWidth()
+	{
+		return width;
+	}
 
-    Widget () {}
+	Widget()
+	{
+	}
 
-    public void draw () {}
+	public void draw()
+	{
+	}
 
-    public boolean mouseOver() {
-        return (MainClass.UI.mouseX >= xPosition
-        && MainClass.UI.mouseX <= xPosition + width
-        && MainClass.UI.mouseY >= yPosition
-        && MainClass.UI.mouseY <= yPosition + height);
-    }
+	public boolean mouseOver()
+	{
+		return (MainClass.UI.mouseX >= xPosition
+				&& MainClass.UI.mouseX <= xPosition + width
+				&& MainClass.UI.mouseY >= yPosition
+				&& MainClass.UI.mouseY <= yPosition + height);
+	}
 
 }
