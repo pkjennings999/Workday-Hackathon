@@ -1,13 +1,10 @@
 package Praptrick;
 import processing.core.PApplet;
 import processing.core.PImage;
-import controlP5.*;
-
 
 public class MainClass extends PApplet
 {
 	public static MainClass UI;
-	ControlP5 cp5;
 	
 	PImage	background;
 	PImage	appClick;
@@ -18,15 +15,13 @@ public class MainClass extends PApplet
 	PImage	password;
 	PImage	songName;
 
-	int state = 0; 
-	String playListNameString ="";
-	String passwordString = "";
-	String requestSongString = "";
-	String var ="";
+	SearchBar playList;
+	SearchBar passwordString;
+	SearchBar requestName;
 
 	public static void main(String[] args)
 	{
-		PApplet.main("MainClass");
+		PApplet.main("Praptrick.MainClass");
 	}
 
 	public void settings()
@@ -47,17 +42,7 @@ public class MainClass extends PApplet
 		password = loadImage("password.png");
 		songName = loadImage("SongName.png");
 		
-		cp5 = new ControlP5(this);
-		
-		cp5.addTextfield("Playlist Name")
-	      .setSize(200, 40)
-	          .setFocus(true)
-	            .setColor(color(255, 0, 0));
-		
-		cp5.addTextfield("Password")
-	      .setSize(200, 40)
-	          .setFocus(true)
-	            .setColor(color(255, 0, 0));
+		playList = new SearchBar(100,160,50);
 	}
 
 	public void draw()
@@ -100,21 +85,13 @@ public class MainClass extends PApplet
 
 	public void drawCreateScreen()
 	{
-
-		fill(255);
 		background(150, 0, 100);
 		image(backButton, 200, 580);
 		image(playlistName, 130, 60);
 		//rect(100, 160, 300, 30, 0);
 		image(password, 130, 260);
 		//rect(100, 360, 300, 30, 0);
-		
-		fill(0);
-		if(GlobalVariables.createScreen)
-		{
-			text(cp5.get(Textfield.class,"Playlist Name").getText(), 360,130);
-			text(cp5.get(Textfield.class,"Password").getText(), 360,130);
-		}
+		playList.draw();
 	}
 
 	public void drawRequestScreen()
@@ -133,22 +110,11 @@ public class MainClass extends PApplet
 		
 		if(GlobalVariables.requestScreen)
 		{
-			text(cp5.get(Textfield.class,"Playlist Name").getText(), 360,130);
-			text(cp5.get(Textfield.class,"Password").getText(), 360,130);
+			
 		}
 
 	}
 	
-	public void keyPressed() 
-	{
-		 
-		  if (key==ENTER||key==RETURN) {
-		 
-		    state++;
-		  } else
-		  var = var + key;
-	}
-
 	public void mouseClicked()
 	{
 		if (GlobalVariables.homescreen)
