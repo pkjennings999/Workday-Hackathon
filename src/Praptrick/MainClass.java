@@ -6,6 +6,7 @@ import controlP5.*;
 
 public class MainClass extends PApplet
 {
+	public static MainClass UI;
 	ControlP5 cp5;
 	
 	PImage	background;
@@ -30,6 +31,7 @@ public class MainClass extends PApplet
 
 	public void settings()
 	{
+		UI = this;
 		size(GlobalConstants.SCREEN_WIDTH, GlobalConstants.SCREEN_HEIGHT);
 
 	}
