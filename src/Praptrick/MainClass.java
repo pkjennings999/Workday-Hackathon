@@ -42,9 +42,10 @@ public class MainClass extends PApplet
 		password = loadImage("password.png");
 		songName = loadImage("SongName.png");
 		
-		playList = new SearchBar(100,160,300);
-		passwordString = new SearchBar(100,360,300);
-		requestName = new SearchBar(100,545,300);
+
+		playList = new SearchBar(100, 160, 300, GlobalVariables.playListOut);
+		passwordString = new SearchBar(100, 360, 300, GlobalVariables.passwordStringOut);
+		requestName = new SearchBar(100, 545, 300, GlobalVariables.requestNameOut);
 	}
 
 	public void draw()
