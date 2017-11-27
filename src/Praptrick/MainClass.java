@@ -31,7 +31,6 @@ public class MainClass extends PApplet
 		UI = this;
 		size(GlobalConstants.SCREEN_WIDTH, GlobalConstants.SCREEN_HEIGHT);
 
-		
 	}
 
 	public void setup()
