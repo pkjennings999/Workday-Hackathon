@@ -26,7 +26,6 @@ public class SearchBar extends Widget
 	private Color	textTwoColor	= Colors.AZUREISH_WHITE;
 	private int		cursorColor;
 	private String	output;
-	// TODO: Make this not require GlobalVariable
 
 	public SearchBar(int xPosition, int yPosition, int width, String output)
 	{
