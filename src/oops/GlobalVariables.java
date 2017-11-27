@@ -16,13 +16,13 @@ public class GlobalVariables
 	public static String	passwordStringOut;
 	public static String	requestNameOut;
 	
-	public static ArrayList<String> play1 = new ArrayList<String>(10);
+	public static String[] play1 = new String[10];
 	
-	public static ArrayList<String> play2 = new ArrayList<String>(10);
+	public static String[] play2 = new String[10];
 	
-	public static ArrayList<String> play3 = new ArrayList<String>(10);
+	public static String[] play3 = new String[10];
 	
-	public static ArrayList<String> play4 = new ArrayList<String>(10);
+	public static String[] play4 = new String[10];
 	
-	public static ArrayList<String> play5 = new ArrayList<String>(10);
+	public static String[] play5 = new String[10];
 }

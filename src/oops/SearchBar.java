@@ -68,13 +68,20 @@ public class SearchBar extends Widget
 				case '\n':
 					output = entry;
 					System.out.print(output);
-					if(output.contains("https://"))
+					if(GlobalVariables.requestScreen)
 					{
-						sendName.songLink(output);
+						if(output.contains("https://"))
+						{
+							sendName.songLink(output);
+						}
+						else
+						{
+							sendName.PlaylistName(output);
+						}
 					}
-					else
+					else if(GlobalVariables.createScreen)
 					{
-						sendName.PlaylistName(output);
+						createPlaylist.PlaylistName(output);
 					}
 					reset();
 					break;
