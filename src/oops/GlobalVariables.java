@@ -14,13 +14,15 @@ public class GlobalVariables
 	public static String	passwordStringOut;
 	public static String	requestNameOut;
 	
-	public static String[] play1 = new String[10];
+	public static String[] play1 = new String[11];
 	
-	public static String[] play2 = new String[10];
+	public static String[] play2 = new String[11];
 	
-	public static String[] play3 = new String[10];
+	public static String[] play3 = new String[11];
 	
-	public static String[] play4 = new String[10];
+	public static String[] play4 = new String[11];
 	
-	public static String[] play5 = new String[10];
+	public static String[] play5 = new String[11];
+	
+	public static boolean placeholderForSomethingChanged = false;
 }

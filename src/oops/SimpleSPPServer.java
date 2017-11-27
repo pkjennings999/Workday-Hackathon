@@ -16,7 +16,7 @@ import javax.microedition.io.*;
 * Class that implements an SPP Server which accepts single line of
 * message from an SPP client and sends a single line of response to the client.
 */
-public class SimpleSPPServer extends Thread
+public class SimpleSPPServer
 {
 
 	//start server
@@ -52,14 +52,14 @@ public class SimpleSPPServer extends Thread
 
 		//send response to spp client
 		OutputStream outStream = connection.openOutputStream();
-		BufferedWriter bWriter = new BufferedWriter(
+		/*BufferedWriter bWriter = new BufferedWriter(
 				new OutputStreamWriter(outStream));
-		bWriter.write("Response String from SPP Server\r\n");
+		bWriter.write("Response String from SPP Server\r\n");*/
 
-		/*PrintWriter pWriter=new PrintWriter(new OutputStreamWriter(outStream));
+		PrintWriter pWriter=new PrintWriter(new OutputStreamWriter(outStream));
 		pWriter.write("Response String from SPP Server\r\n");
 		pWriter.flush();
-		pWriter.close();*/
+		pWriter.close();
 
 		streamConnNotifier.close();
 

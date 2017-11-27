@@ -15,6 +15,8 @@ public class MainClass extends PApplet
 	PImage	playlistName;
 	//PImage	password;
 	PImage	songName;
+	
+	Client client;
 
 	SearchBar	playList;
 	//SearchBar	passwordString;
@@ -48,6 +50,7 @@ public class MainClass extends PApplet
 				//GlobalVariables.passwordStringOut);
 		requestName = new SearchBar(100, 545, 300,
 				GlobalVariables.requestNameOut);
+		client = null;
 	}
 
 	public void draw()
@@ -63,10 +66,28 @@ public class MainClass extends PApplet
 		else if (GlobalVariables.createScreen)
 		{
 			drawCreateScreen();
+			
 		}
 		else if (GlobalVariables.requestScreen)
 		{
 			drawRequestScreen();
+			if (GlobalVariables.placeholderForSomethingChanged)
+			{
+				if (client == null)
+				{
+					client = new Client(Client.DEFAULT_DST_NODE, Client.DEFAULT_DST_PORT, Client.DEFAULT_SRC_PORT);
+				}
+				try
+				{
+					client.send(GlobalVariables.requestNameOut);
+				}
+				catch (Exception e)
+				{
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			
 
 		}
 	}

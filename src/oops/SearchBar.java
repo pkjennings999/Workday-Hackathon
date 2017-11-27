@@ -67,6 +67,7 @@ public class SearchBar extends Widget
 			{
 				case '\n':
 					output = entry;
+					GlobalVariables.placeholderForSomethingChanged = true;
 					System.out.print(output);
 					if(GlobalVariables.requestScreen)
 					{
