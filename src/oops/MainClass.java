@@ -1,4 +1,4 @@
-package Praptrick;
+package oops;
 
 import processing.core.PApplet;
 import processing.core.PImage;
@@ -22,7 +22,7 @@ public class MainClass extends PApplet
 
 	public static void main(String[] args)
 	{
-		PApplet.main("Praptrick.MainClass");
+		PApplet.main("oops.MainClass");
 	}
 
 	public void settings()

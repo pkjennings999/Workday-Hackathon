@@ -1,4 +1,4 @@
-package Praptrick;
+package oops;
 public class GlobalConstants
 {
 	public static final int	SCREEN_HEIGHT	= 886;
