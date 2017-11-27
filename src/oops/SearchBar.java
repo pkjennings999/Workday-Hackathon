@@ -72,11 +72,11 @@ public class SearchBar extends Widget
 					{
 						if(output.contains("https://"))
 						{
-							sendName.songLink(output);
+							requestSong.songLink(output);
 						}
 						else
 						{
-							sendName.PlaylistName(output);
+							requestSong.PlaylistName(output);
 						}
 					}
 					else if(GlobalVariables.createScreen)

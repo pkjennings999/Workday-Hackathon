@@ -1,6 +1,6 @@
 package oops;
 
-public class sendName
+public class requestSong
 {
 	public static String link = null;
 	public static String playListName = null;
