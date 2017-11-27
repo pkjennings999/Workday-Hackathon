@@ -13,7 +13,7 @@ public class MainClass extends PApplet
 	PImage	createPlaylist;
 	PImage	requestSong;
 	PImage	playlistName;
-	PImage	password;
+	//PImage	password;
 	PImage	songName;
 
 	SearchBar	playList;
@@ -40,7 +40,7 @@ public class MainClass extends PApplet
 		createPlaylist = loadImage("createPlaylist.PNG");
 		requestSong = loadImage("requestSong.PNG");
 		playlistName = loadImage("PlaylistName.PNG");
-		password = loadImage("password.png");
+		//password = loadImage("password.png");
 		songName = loadImage("SongName.png");
 
 		playList = new SearchBar(100, 160, 300, GlobalVariables.playListOut);
@@ -82,7 +82,7 @@ public class MainClass extends PApplet
 		fill(255);
 		background(100, 20, 225);
 		noStroke();
-		image(appClick, 25, 630);
+		image(appClick, 25, 780);
 		rect(150, 200, 200, 100, 0);
 		image(createPlaylist, 200, 200);
 		rect(150, 450, 200, 100, 0);
@@ -94,8 +94,8 @@ public class MainClass extends PApplet
 		background(150, 0, 100);
 		image(backButton, 200, 580);
 		image(playlistName, 130, 60);
-		image(password, 130, 260);
-		image(appClick, 25, 630);
+		//image(password, 130, 260);
+		image(appClick, 25, 780);
 		playList.draw();
 		//passwordString.draw();
 	}
@@ -104,10 +104,10 @@ public class MainClass extends PApplet
 	{
 		fill(255);
 		background(150, 0, 100);
-		image(appClick, 25, 630);
+		image(appClick, 25, 780);
 		image(backButton, 200, 580);
 		image(playlistName, 130, 60);
-		image(password, 130, 260);
+		//image(password, 130, 260);
 		image(songName, 130, 460);
 
 		playList.draw();
