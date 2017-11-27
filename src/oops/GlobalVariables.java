@@ -1,7 +1,5 @@
 package oops;
 
-import java.util.ArrayList;
-
 public class GlobalVariables
 {
 	public static boolean	homescreen			= true;
