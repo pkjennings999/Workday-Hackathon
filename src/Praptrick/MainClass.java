@@ -10,6 +10,7 @@ public class MainClass extends PApplet
 	PImage	appClick;
 	PImage	backButton;
 	PImage	createPlaylist;
+	
 	PImage	requestSong;
 	PImage	playlistName;
 	PImage	password;
