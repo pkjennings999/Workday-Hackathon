@@ -1,4 +1,4 @@
-package Praptrick;
+package oops;
 
 import java.awt.Color;
 import java.util.ArrayList;
