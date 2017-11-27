@@ -15,6 +15,7 @@ public class MainClass extends PApplet
 	PImage	playlistName;
 	//PImage	password;
 	PImage	songName;
+	PImage playButton;
 	
 	Client client;
 
@@ -44,6 +45,7 @@ public class MainClass extends PApplet
 		playlistName = loadImage("PlaylistName.PNG");
 		//password = loadImage("password.png");
 		songName = loadImage("SongName.png");
+		playButton = loadImage("PlayButton.png");
 
 		playList = new SearchBar(100, 160, 300, GlobalVariables.playListOut);
 		//passwordString = new SearchBar(100, 360, 300,
@@ -90,6 +92,10 @@ public class MainClass extends PApplet
 			
 
 		}
+		else if(GlobalVariables.play)
+		{
+			drawPlayScreen();
+		}
 	}
 
 	public void drawHomeScreen()
@@ -108,6 +114,8 @@ public class MainClass extends PApplet
 		image(createPlaylist, 200, 200);
 		rect(150, 450, 200, 100, 0);
 		image(requestSong, 200, 450);
+		rect(150, 700, 200, 100);
+		image(playButton, 220, 700);
 	}
 
 	public void drawCreateScreen()
@@ -119,6 +127,48 @@ public class MainClass extends PApplet
 		image(appClick, 25, 780);
 		playList.draw();
 		//passwordString.draw();
+	}
+	
+	public void drawPlayScreen()
+	{
+		background(150, 0, 100);
+		image(backButton, 200, 580);
+		fill(0);
+		if(GlobalVariables.play1[0]!=null)
+		{
+			fill(255);
+			rect(100,80,150,50);
+			fill(0);
+			text(GlobalVariables.play1[0].toString(), 100, 100);
+		}
+		if(GlobalVariables.play2[0]!=null)
+		{
+			fill(255);
+			rect(100,180,150,50);
+			fill(0);
+			text(GlobalVariables.play2[0].toString(), 100, 200);
+		}
+		if(GlobalVariables.play3[0]!=null)
+		{
+			fill(255);
+			rect(100,280,150,50);
+			fill(0);
+			text(GlobalVariables.play3[0].toString(), 100, 300);
+		}
+		if(GlobalVariables.play4[0]!=null)
+		{
+			fill(255);
+			rect(100,380,150,50);
+			fill(0);
+			text(GlobalVariables.play4[0].toString(), 100, 400);
+		}
+		if(GlobalVariables.play5[0]!=null)
+		{
+			fill(255);
+			rect(100,480,150,50);
+			fill(0);
+			text(GlobalVariables.play5[0].toString(), 100, 500);
+		}
 	}
 
 	public void drawRequestScreen()
@@ -156,12 +206,22 @@ public class MainClass extends PApplet
 			{
 				GlobalVariables.createScreen = true;
 				GlobalVariables.createRequestScreen = false;
+				GlobalVariables.play = false;
 			}
 			else if (mouseX <= 350 && mouseX >= 150 && mouseY <= 550
 					&& mouseY >= 450)
 			{
 				GlobalVariables.requestScreen = true;
 				GlobalVariables.createRequestScreen = false;
+				GlobalVariables.play = false;
+			}
+			else if(mouseX <= 350 && mouseX >= 150 && mouseY <= 800
+					&& mouseY >= 700)
+			{
+				GlobalVariables.requestScreen = false;
+				GlobalVariables.createScreen = false;
+				GlobalVariables.createRequestScreen = false;
+				GlobalVariables.play =true;
 			}
 		}
 		else if (GlobalVariables.createScreen)
@@ -171,6 +231,7 @@ public class MainClass extends PApplet
 			{
 				GlobalVariables.createScreen = false;
 				GlobalVariables.createRequestScreen = true;
+				GlobalVariables.play = false;
 			}
 		}
 		else if (GlobalVariables.requestScreen)
@@ -180,7 +241,39 @@ public class MainClass extends PApplet
 			{
 				GlobalVariables.requestScreen = false;
 				GlobalVariables.createRequestScreen = true;
+				GlobalVariables.play = false;
 			}
+		}
+		else if (GlobalVariables.play)
+		{
+			if (mouseX <= 500 && mouseX >= 200 && mouseY <= 880
+					&& mouseY >= 580)
+			{
+				GlobalVariables.requestScreen = false;
+				GlobalVariables.createRequestScreen = true;
+				GlobalVariables.play = false;
+			}
+			else if (mouseX <= 350 && mouseX >= 100 && mouseY <= 880
+					&& mouseY >= 580)
+			{
+				
+			}
+			else if (mouseX <= 350 && mouseX >= 100 && mouseY <= 880
+					&& mouseY >= 580)
+			{
+				
+			}
+			else if (mouseX <= 350 && mouseX >= 100 && mouseY <= 880
+					&& mouseY >= 580)
+			{
+				
+			}
+			else if (mouseX <= 350 && mouseX >= 100 && mouseY <= 880
+					&& mouseY >= 580)
+			{
+				
+			}
+			
 		}
 	}
 }
