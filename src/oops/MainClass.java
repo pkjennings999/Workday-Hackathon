@@ -82,6 +82,7 @@ public class MainClass extends PApplet
 		fill(255);
 		background(100, 20, 225);
 		noStroke();
+		image(appClick, 25, 630);
 		rect(150, 200, 200, 100, 0);
 		image(createPlaylist, 200, 200);
 		rect(150, 450, 200, 100, 0);
@@ -94,6 +95,7 @@ public class MainClass extends PApplet
 		image(backButton, 200, 580);
 		image(playlistName, 130, 60);
 		image(password, 130, 260);
+		image(appClick, 25, 630);
 		playList.draw();
 		//passwordString.draw();
 	}
@@ -102,6 +104,7 @@ public class MainClass extends PApplet
 	{
 		fill(255);
 		background(150, 0, 100);
+		image(appClick, 25, 630);
 		image(backButton, 200, 580);
 		image(playlistName, 130, 60);
 		image(password, 130, 260);
