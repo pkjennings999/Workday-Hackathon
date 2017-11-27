@@ -2,9 +2,6 @@ package Praptrick;
 
 import java.awt.*;
 
-/**
- * Created by Conor C on 3/29/2017.
- */
     public class Colors {
         public static final Color DARK_GREEN = new Color(0xD1E7FF);
         public static final Color PICTON_BLUE = new Color(0x2F6AFE);

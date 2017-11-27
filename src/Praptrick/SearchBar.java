@@ -33,6 +33,7 @@ public class SearchBar extends Widget {
     this.height = 25;
     this.fontSize = height - 2 * margin;
     this.radius = 3;
+    this.ghost_text = "";
 
 
     // Register as observer for mouse and keys
