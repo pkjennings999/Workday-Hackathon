@@ -10,3 +10,6 @@ anything from software interfacing with a
 music-based web API, to rhythm games, to MIDI
 synthesising programs or any other cool 
 music-related projects you can think of!"
+
+Created by Prapti Setty, Patrick Jennings and Conor Clery
+(Students of Trinity College Dublin - 2nd Year)
