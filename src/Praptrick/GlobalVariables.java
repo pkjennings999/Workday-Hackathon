@@ -13,5 +13,6 @@ public class GlobalVariables
 	public static String playListOut;
 	public static String passwordStringOut;
 	public static String requestNameOut;
+	
 
 }
